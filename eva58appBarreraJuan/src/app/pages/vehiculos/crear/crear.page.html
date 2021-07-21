@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crear</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Color</ion-label>
+      <ion-input [(ngModel)]="contacto.color" type="text" value=""></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Marca</ion-label>
+      <ion-input [(ngModel)]="contacto.marca" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Matricula</ion-label>
+      <ion-input [(ngModel)]="contacto.matricula" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Tipo</ion-label>
+      <ion-input [(ngModel)]="contacto.tipo" type="text" value=""></ion-input>
+    </ion-item>
+    
+    <ion-button color="success" (click)="guardar()">Guardar Usuario</ion-button>
+
+  </ion-list>
+  
+  
+  <app-demo icon='alarm-outline' (updateData)="update($event)"></app-demo>
+  {{contador}}
+
+</ion-content>
